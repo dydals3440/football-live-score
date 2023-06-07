@@ -3,8 +3,8 @@ export const fetchFixtures = async () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '59129c8f61mshc211d8d3b415a72p190690jsn3fdebbf50325',
-      'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com',
+      'X-RapidAPI-Key': process.env.RAPIDAPI_KEY,
+      'X-RapidAPI-Host': process.env.RAPIDAPI_HOST,
     },
   };
 
