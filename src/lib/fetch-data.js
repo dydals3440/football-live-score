@@ -8,8 +8,12 @@ export const fetchFixtures = async () => {
     },
   };
 
-  fetch(url, options)
+  const result = fetch(url, options)
     .then((response) => response.json())
-    .then((response) => console.log(response))
+    .then((response) => {
+      return response;
+    })
     .catch((err) => console.error(err));
+
+  return result;
 };

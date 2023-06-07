@@ -12,6 +12,7 @@ import { Footer } from './components/Footer';
 
 function App() {
   const [fixtures, setFixtures] = useState([data]); // 초기 상태로 빈 배열([])을 사용합니다.
+  console.log(data);
   // const fetchData = async () => {
   //   const result = await fetchFixtures();
   //   setFixtures(result);

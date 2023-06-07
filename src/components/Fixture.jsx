@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import BALLING from '../assets/images/1.png';
+import BALLIMG from '../assets/images/1.png';
 
 export const Fixture = ({ data }) => {
   const params = useParams();
@@ -49,7 +49,7 @@ export const Fixture = ({ data }) => {
                 <div className='p-5' key={event.team.id}>
                   {event.type === 'Goal' ? (
                     <div>
-                      <img src={BALLING} alt='GOAL' width={25} />
+                      <img src={BALLIMG} alt='GOAL' width={25} />
                     </div>
                   ) : (
                     <div className='badge badge-secondary'>{event.type}</div>
@@ -63,13 +63,13 @@ export const Fixture = ({ data }) => {
         <div className='grid gird-cols-1 divide-y' align='center'>
           <h1 className='bg-gray-700 p-1 text-gray-300 text-xl'>Score</h1>
           <div className='p-2'>
-            First Half
+            전반전
             <br />
             {fixture.score.halftime.home} : {fixture.score.halftime.away}
           </div>
           {fixture.score.fulltime.home ? (
             <div className='p-2'>
-              Full Time
+              풀 타임
               <br />
               {fixture.score.fulltime.home} : {fixture.score.fulltime.away}
             </div>
@@ -77,7 +77,7 @@ export const Fixture = ({ data }) => {
 
           {fixture.score.fulltime.home ? (
             <div className='p-2'>
-              Full Time
+              풀 타임
               <br />
               {fixture.score.extratime.home} : {fixture.score.extratime.away}
             </div>
@@ -85,7 +85,7 @@ export const Fixture = ({ data }) => {
 
           {fixture.score.fulltime.home ? (
             <div className='p-2'>
-              Penalties
+              페널티킥
               <br />
               {fixture.score.penalty.home} : {fixture.score.penalty.away}
             </div>
